@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+let homecontroller = require('../Controllers/homecontroller')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/busqueda/:id', homecontroller.buscarProductos) 
 
 module.exports = router;
